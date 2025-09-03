@@ -20,8 +20,7 @@ export const InfoSlider = () => {
   }, []);
 
   return (
-    <section className="relative w-full mt-[4.9rem] overflow-hidden shadow-lg h-[600px] md:h-[500px] sm:h-[400px]">
-      {/* Slides */}
+    <section className="relative w-full mt-[4.9rem] overflow-hidden shadow-lg h-[600px] md:h-[600px] sm:h-[400px]">
       <div
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -36,8 +35,6 @@ export const InfoSlider = () => {
           </div>
         ))}
       </div>
-
-      {/* Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 md:px-10 bg-black/30">
         <h1 className="text-white font-extrabold leading-[1.2] mb-6 md:mb-8 max-w-3xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Надежная охрана <br /> безопасность <br /> уверенность
@@ -45,10 +42,8 @@ export const InfoSlider = () => {
         <p className="text-white mb-6 max-w-2xl text-sm sm:text-base md:text-lg">
           Ваша надёжная защита: безопасность и уверенность в каждом моменте.
         </p>
-        <ButtonForm />
+        <ButtonForm label="Оставить заявку" />
       </div>
-
-      {/* Dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, i) => (
           <span

@@ -2,13 +2,30 @@ import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-export const ButtonForm = () => {
+export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label = "Связаться" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "" });
   const [errors, setErrors] = useState({ name: "", phone: "" });
   const [submitStatus, setSubmitStatus] = useState("");
+
+  const colorClasses = {
+    blue: "bg-blue-600 hover:bg-blue-700",
+    red: "bg-red-600 hover:bg-red-700",
+    green: "bg-green-600 hover:bg-green-700",
+    white: "bg-white hover:bg-gray-200",
+  };
+
+  const textClass = {
+    "black" : "text-black",
+  }
+
+  const textColors = {
+    "blue-600": "text-blue-600",
+    "white": "text-white",
+    "black": "text-black",
+  };
 
   const validateForm = () => {
     const newErrors = { name: "", phone: "" };
@@ -79,10 +96,10 @@ export const ButtonForm = () => {
   return (
     <>
       <button
-        className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition"
+        className={`${colorClasses[bg]} ${textColors[text]} ${textClass} font-semibold px-6 py-3 rounded-full transition-colors duration-300`}
         onClick={() => setIsOpen(true)}
       >
-        Связаться
+        {label}
       </button>
 
       {isOpen && (
@@ -104,7 +121,7 @@ export const ButtonForm = () => {
               <span className="block w-5 h-0.5 bg-gray-600 -rotate-45 absolute"></span>
             </button>
 
-            <h1 className="text-2xl font-bold mb-2">Оставить заявку</h1>
+            <h1 className="text-2xl font-bold mb-2 text-black">Оставить заявку</h1>
             <p className="text-gray-600 mb-4">
               Заполните форму и наш менеджер свяжется с вами в течение 10 минут
             </p>
@@ -134,8 +151,8 @@ export const ButtonForm = () => {
                   onChange={handleChange}
                   disabled={isLoading}
                   className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.name
-                      ? "border-red-500 focus:ring-red-400"
-                      : "border-gray-300"
+                    ? "border-red-500 focus:ring-red-400"
+                    : "border-gray-300"
                     }`}
                 />
                 {errors.name && (
@@ -153,8 +170,7 @@ export const ButtonForm = () => {
                   onChange={handlePhoneChange}
                   enableSearch
                   disableSearchIcon
-                  inputClass={`w-full px-7 py-4 text-lg mb-4 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.phone ? "border-red-500 focus:ring-red-400" : "border-gray-300"
-                    }`}
+                  inputClass={`w-full px-7 py-4 text-lg mb-4 rounded-lg border text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.phone ? "border-red-500 focus:ring-red-400" : "border-gray-300"}`}
                   buttonClass="absolute left-0 top-0 h-full px-4 rounded-l-lg bg-transparent"
                   containerClass="relative w-full"
                   dropdownClass="rounded-lg shadow-lg"
