@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "react-phone-input-2/lib/style.css"; // обязательно для стилей
+import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 
 export const FittingForm = () => {
@@ -62,7 +62,6 @@ export const FittingForm = () => {
           alt="Background"
           className="w-full h-full object-cover"
         />
-
         <div className="absolute top-1/2 right-6 md:right-12 transform -translate-y-1/2 bg-white rounded-2xl shadow-xl p-6 md:p-8 w-[90%] max-w-sm">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
             Оставить заявку
@@ -70,9 +69,7 @@ export const FittingForm = () => {
           <p className="text-gray-500 text-sm mb-6">
             Перезвоним в течение 10 минут
           </p>
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            {/* Имя */}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Имя:
@@ -91,8 +88,6 @@ export const FittingForm = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.name}</p>
               )}
             </div>
-
-            {/* Телефон */}
             <div>
               <label className="block mb-1 font-medium text-left">
                 Телефон: *
@@ -111,7 +106,6 @@ export const FittingForm = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
               )}
             </div>
-
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition"

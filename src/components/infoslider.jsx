@@ -1,4 +1,3 @@
-// InfoSlider.jsx
 import React, { useState, useEffect } from "react";
 import { ButtonForm } from "./buttonform";
 import "../style/index.css";

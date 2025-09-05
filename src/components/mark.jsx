@@ -23,7 +23,6 @@ export const Mark = () => {
                 <p className="text-gray-600 mb-10">
                     "Отзывы клиентов — подтверждение нашей надёжности и высокого уровня сервиса!"
                 </p>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {marks.map((mark, idx) =>
                         mark.images.map((img, i) => (

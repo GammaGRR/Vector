@@ -101,7 +101,6 @@ export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label 
       >
         {label}
       </button>
-
       {isOpen && (
         <div
           className={`fixed inset-0 bg-black/60 flex items-center justify-center z-50 ${isClosing ? "opacity-0" : "opacity-100"
@@ -120,12 +119,10 @@ export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label 
               <span className="block w-5 h-0.5 bg-gray-600 rotate-45 absolute"></span>
               <span className="block w-5 h-0.5 bg-gray-600 -rotate-45 absolute"></span>
             </button>
-
             <h1 className="text-2xl font-bold mb-2 text-black">Оставить заявку</h1>
             <p className="text-gray-600 mb-4">
               Заполните форму и наш менеджер свяжется с вами в течение 10 минут
             </p>
-
             {submitStatus === "success" && (
               <div className="bg-green-100 text-green-700 px-4 py-2 rounded mb-4 text-center">
                 ✓ Заявка успешно отправлена!
@@ -136,7 +133,6 @@ export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label 
                 ✗ Ошибка при отправке. Попробуйте еще раз.
               </div>
             )}
-
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div>
                 <label htmlFor="name" className="block mb-1 font-medium text-left">
@@ -159,7 +155,6 @@ export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label 
                   <p className="text-red-500 text-sm mt-1">{errors.name}</p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="phone" className="block mb-1 font-medium text-left">
                   Телефон: *
@@ -184,7 +179,6 @@ export const ButtonForm = ({ bg = "blue", hover = "blue", text = "white", label 
                   <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
                 )}
               </div>
-
               <button
                 type="submit"
                 disabled={isLoading}

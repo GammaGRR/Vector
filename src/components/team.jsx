@@ -30,7 +30,6 @@ export const TeamSection = () => {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-12">
-      {/* Заголовок */}
       <div className="text-center mb-12" data-aos="fade-down">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
           Наша команда профессионалов
@@ -39,8 +38,6 @@ export const TeamSection = () => {
           «Команда профессионалов, готовых обеспечить вашу безопасность»
         </p>
       </div>
-
-      {/* Карточки */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {teamMembers.map((member, idx) => (
           <div

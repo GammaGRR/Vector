@@ -50,14 +50,13 @@ export const SecurityService = () => {
                     ОХРАНА ВЕКТОР —
                     <br className="hidden sm:block" /> ЗАЩИТА И БЕЗОПАСНОСТЬ
                 </h2>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-2xl shadow-md hover:shadow-lg transition flex flex-col"
                             data-aos="fade-up"
-                            data-aos-delay={index * 150} // задержка для последовательного появления
+                            data-aos-delay={index * 150}
                         >
                             {service.image && (
                                 <img

@@ -7,7 +7,7 @@ export const Header = () => {
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    const headerOffset = 100; // высота хедера
+    const headerOffset = 100;
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - headerOffset;
 
@@ -46,9 +46,7 @@ export const Header = () => {
             Отзывы
           </a>
         </nav>
-
         <ButtonForm />
-
         <div
           className="md:hidden flex flex-col justify-center gap-1.5 w-10 h-6 cursor-pointer z-50"
           onClick={() => setMenuOpen(!menuOpen)}

@@ -36,7 +36,6 @@ export const WorkSteps = () => {
               Встреча с клиентом, разработка плана охраны, выполнение задания, обратная связь.
             </p>
           </div>
-
           <div className="divide-y">
             {steps.map((step) => (
               <div key={step.id} className="py-4">
